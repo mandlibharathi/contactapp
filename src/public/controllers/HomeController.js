@@ -14,7 +14,7 @@
 
         toaster.pop("wait", "Loading contacts...");
 
-        repository.getContacts(vm.search).then(function (result) {
+repository.getContacts(vm.search).then(function (result) {
             vm.contacts = result.data;
         });
 

@@ -4,7 +4,7 @@ function api (app) {
     var db = mongojs("contactManager", ["contacts"]);
 
     app.get("/api/contact", function (request, response) {
-        var pageSize = request.query.pageSize ? parseInt(request.query.pageSize) : 10;
+        var pageSize = request.query.pageSize ? parseInt(request.query.pageSize):10
         var firstName = request.query.firstName;
         var middleName = request.query.middleName;
         var lastName = request.query.lastName;
@@ -49,7 +49,7 @@ function api (app) {
     app.post("/api/contact", function (request, response) {
         db.contacts.insert(request.body, function (err, doc) {
             if (err) console.log("Error: " + err);
-
+            
             response.json(doc);
         });
     });

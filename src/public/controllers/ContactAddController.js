@@ -9,7 +9,6 @@
         var vm = this;
 
         vm.model = {};
-
         vm.save = function () {
             toaster.pop("wait", "Saving...");
 
